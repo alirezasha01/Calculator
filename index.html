@@ -13,47 +13,48 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6 mt-5">
-                <p id="output"></p>
+                <p class="text-center mb-4 d-block" id="output"></p>
+                <form name="form1">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Calculator" aria-label="Calculator" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-success" type="button" id="button-addon2">Copy!</button>
+                    <input id="inputt" type="text" class="form-control" placeholder="Calculator" aria-label="Calculator" aria-describedby="button-addon2" name="answer">
                   </div>
                 <table class="table table-borderless mt-3">
                     <tbody>
                       <tr>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">C</button></td>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">(</button></td>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">)</button></td>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">%</button></td>
-                        <td><button type="button" class="btn btn-danger w-100 p-2">del</button></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "C" onclick = "form1.answer.value = ' ' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "(" onclick = "form1.answer.value += '(' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = ")" onclick = "form1.answer.value += ')' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "%" onclick = "form1.answer.value += '%' "/></td>
+                        <td><input type="button" class="btn btn-danger w-100 p-2" value = "del" onclick = "form1.answer.value = form1.answer.value.substring(0, form1.answer.value.length - 1);"/></td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">7</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">8</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">9</button></td>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">/</button></td>
-                        <td rowspan="4"><button type="button" class="btn btn-success w-100 h-200px">=</button></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "7" onclick = "form1.answer.value += '7' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "8" onclick = "form1.answer.value += '8' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "9" onclick = "form1.answer.value += '9' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "/" onclick = "form1.answer.value += '/' "/></td>
+                        <td rowspan="4"><input type="button" class="btn btn-success w-100 h-200px" value = "=" onclick = "form1.answer.value = eval(form1.answer.value)" /></td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">4</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">5</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">6</button></td>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">*</button></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "4" onclick = "form1.answer.value += '4' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "5" onclick = "form1.answer.value += '5' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "6" onclick = "form1.answer.value += '6' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "*" onclick = "form1.answer.value += '*' "/></td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">1</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">2</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">3</button></td>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">-</button></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "1" onclick = "form1.answer.value += '1' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "2" onclick = "form1.answer.value += '2' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "3" onclick = "form1.answer.value += '3' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "-" onclick = "form1.answer.value += '-' "/></td>
                       </tr>
                       <tr>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">00</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">0</button></td>
-                        <td><button type="button" class="btn btn-primary w-100 p-2">.</button></td>
-                        <td><button type="button" class="btn btn-warning w-100 p-2">+</button></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "00" onclick = "form1.answer.value += '00' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "0" onclick = "form1.answer.value += '0' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "." onclick = "form1.answer.value += '.' "/></td>
+                        <td><input type="button" class="btn btn-warning w-100 p-2" value = "+" onclick = "form1.answer.value += '+' "/></td>
                       </tr>
                     </tbody>
                   </table>
+                </form>
                 
             </div>
             <div class="col-md-3"></div>
